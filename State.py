@@ -1,3 +1,4 @@
+import copy
 class State :
 
     # CLASS CONSTRUCTOR
@@ -20,6 +21,18 @@ class State :
                        return False
         return True
     
+    # Get the positon of the empty tile in 2d array
+    def getEmptyTilePosition(self):
+        for i in range(3):
+            for j in range(3):
+                if(self.tiles[i][j]==" "):
+                    return i , j
+    
+    # get copy of current state
+    def getCopy(self):
+        return copy.deepcopy(self.tiles)    
+
+
     
 
                        
