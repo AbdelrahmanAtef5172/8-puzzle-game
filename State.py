@@ -32,6 +32,19 @@ class State :
     def getCopy(self):
         return copy.deepcopy(self.tiles)    
 
+    # Get the neighbours of the state
+    def getNeighbours(self):
+        neighbours=[]
+        i , j = self.getEmptyTilePosition()
+        for row , column in [[i+1,j],[i,j+1],[i-1,j],[i,j-1]]:
+            if ( 3>row>=0 and 3>column>=0):
+                copiedArray = self.getCopy()
+                temp = copiedArray[i][j]
+                copiedArray[i][j]= copiedArray[row][column]
+                copiedArray[row][column] = temp
+                neighbours.append(copiedArray)
+        return neighbours
+    
 
     
 
