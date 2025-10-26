@@ -111,6 +111,5 @@ def solve_astar(initial_tiles, heuristic_func):
 if __name__ == "__main__":
     
     # The starting puzzle from your assignment
-    start_tiles = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
-    
+    start_tiles = [[1,2,3],[4,5,6],[7,8,0]]
     solve_astar(start_tiles, misplaced_tiles)
