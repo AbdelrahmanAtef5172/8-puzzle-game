@@ -62,4 +62,4 @@ def depth_first_search(initialState: State):
     print("NO SOLUTION")
     return None
 
-path,moves,path_length,depth,nodes,running_time = depth_first_search(State([[1,2,3],[4,5,6],[7,8,0]]))
+paths,moves,path_length,depth,nodes,running_time = depth_first_search(State([[1,2,3],[4,5,6],[7,8,0]]))
